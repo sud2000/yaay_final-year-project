@@ -7,3 +7,8 @@ datetime
 matplotlib
 seaborn
 pandas_profiling
+sklearn
+six
+xgboost
+pydotplus
+graphviz
