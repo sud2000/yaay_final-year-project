@@ -1,4 +1,3 @@
-# Metis Project 3
 
 **Project 3 in the Metis Data Science Bootcamp**
 
