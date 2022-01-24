@@ -1,0 +1,9 @@
+pandas
+numpy
+flask
+scikit-learn
+gunicorn
+datetime
+matplotlib
+seaborn
+pandas_profiling
