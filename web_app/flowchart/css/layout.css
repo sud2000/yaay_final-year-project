@@ -1,0 +1,433 @@
+/* ---------------------------------------------------------
+   HTML5 Bones
+   This stylesheet contains print styling and a section for 
+   you to simply add your own. This is a basic template 
+   after all.
+   ---------------------------------------------------------*/
+
+*,:after,:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   Author's styles
+   ---------------------------------------------------------*/
+
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: visible;
+    position: relative;
+    height: auto;
+    height: 100%;
+}
+
+ul.flowchart {
+    width: 100%;
+    margin: 1em auto 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+    height: auto;
+    overflow: visible;
+    background: transparent url("../img/desktop_line.png") no-repeat top;
+}
+
+ul.flowchart li {
+    float: left;
+    display: block;
+    position: relative;
+}
+
+ul.flowchart li.tall {
+    height: 100px;
+}
+
+ul.flowchart li.middle {
+    height: 325px;
+}
+
+ul.flowchart li.col-1-4 {
+    width: 25%;
+}
+
+ul.flowchart li.col-1-3 {
+    width: 33%;
+}
+
+ul.flowchart li.col-4-4 {
+    width: 100%;
+}
+
+@media screen and (max-width:900px) {
+    ul.flowchart {
+        background: transparent url("../img/tablet_line.png.html") no-repeat top;
+    }
+    
+    ul.flowchart li.col-1-4 {
+        width: 50%;
+    }
+    
+    ul.flowchart li.col-1-3 {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    ul.flowchart {
+        background: transparent url("../img/mobile_line.png.html") no-repeat top;
+    }
+    
+    ul.flowchart li.col-1-4 {
+        width: 100%;
+    }
+    
+    ul.flowchart li.col-1-3 {
+        width: 100%;
+    }
+
+}
+
+ul.flowchart:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ul.flowchart li span {
+	background: #00AADF;
+color: #FFF;
+text-transform: uppercase;
+text-decoration: none;
+display: block;
+text-align: center;
+position: absolute;
+height: 30px;
+line-height: 30px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+width: 50px;
+z-index: 9;}
+
+ul.flowchart li span.one, 
+ul.flowchart li span.two, 
+ul.flowchart li span.three{right:0;
+						  top:50px;}
+						
+ul.flowchart li span.four, 
+ul.flowchart li span.five, 
+ul.flowchart li span.six {right:0;
+						  top:35px;}
+						
+ul.flowchart li span.seven, 
+ul.flowchart li span.eight, 
+ul.flowchart li span.nine, 
+ul.flowchart li span.ten, 
+ul.flowchart li span.eleven, 
+ul.flowchart li span.twelve {right:0;
+							top:30px;}
+							
+ul.flowchart li span.thirteen, 
+ul.flowchart li span.fourteen, 
+ul.flowchart li span.fifteen {right:0;
+							  top:35px;}
+							
+ul.flowchart li span.sixteen, 
+ul.flowchart li span.seventeen, 
+ul.flowchart li span.eighteen {right:0;
+								top:30px;}
+
+ul.flowchart li span.nineteen, 
+ul.flowchart li span.twenty, 
+ul.flowchart li span.twentyone {right:0;
+								top:0px;}
+																
+ul.flowchart li span.twentytwo, 
+ul.flowchart li span.twentythree, 
+ul.flowchart li span.twentyfour {right:0;
+								top:20px;}
+
+ul.flowchart li span.twentyfive, 
+ul.flowchart li span.twentysix, 
+ul.flowchart li span.twentyseven {right:0;
+																top:20px;}
+
+/*FOR TABLET VIEW*/
+@media screen and (max-width:900px) {
+ul.flowchart li span.one, 
+ul.flowchart li span.three, 
+ul.flowchart li span.five, 
+ul.flowchart li span.seven, 
+ul.flowchart li span.nine,
+ul.flowchart li span.eleven,
+ul.flowchart li span.thirteen,
+ul.flowchart li span.fifteen,
+ul.flowchart li span.seventeen,
+ul.flowchart li span.nineteen,
+ul.flowchart li span.twentyone,
+ul.flowchart li span.twentythree,
+ul.flowchart li span.twentyfive,
+ul.flowchart li span.twentyseven
+ 						{right:0;
+						top:30px;}
+
+						ul.flowchart li span.two, 
+						ul.flowchart li span.four, 
+						ul.flowchart li span.six, 
+						ul.flowchart li span.eight, 
+						ul.flowchart li span.ten,
+						ul.flowchart li span.twelve,
+						ul.flowchart li span.fourteen,
+						ul.flowchart li span.sixteen,
+						ul.flowchart li span.eighteen,
+						ul.flowchart li span.twenty,
+						ul.flowchart li span.twentytwo,
+						ul.flowchart li span.twentyfour,
+						ul.flowchart li span.twentysix
+						 						{right:0;
+												top:125px;}
+}
+
+/*FOR MOBILE VIEW*/
+@media screen and (max-width:500px) {
+ul.flowchart li span.one, 
+ul.flowchart li span.two,
+ul.flowchart li span.three, 
+ul.flowchart li span.four, 
+ul.flowchart li span.five,
+ul.flowchart li span.six,  
+ul.flowchart li span.seven,
+ul.flowchart li span.eight, 
+ul.flowchart li span.nine,
+ul.flowchart li span.ten,
+ul.flowchart li span.eleven,
+ul.flowchart li span.twelve,
+ul.flowchart li span.thirteen,
+ul.flowchart li span.fourteen,
+ul.flowchart li span.fifteen,
+ul.flowchart li span.sixteen,
+ul.flowchart li span.seventeen,
+ul.flowchart li span.eighteen,
+ul.flowchart li span.nineteen,
+ul.flowchart li span.twenty,
+ul.flowchart li span.twentyone,
+ul.flowchart li span.twentytwo,
+ul.flowchart li span.twentythree,
+ul.flowchart li span.twentyfour,
+ul.flowchart li span.twentyfive,
+ul.flowchart li span.twentysix,
+ul.flowchart li span.twentyseven
+ 						{left:50%;
+						margin-left:-25px;
+						top:225px;
+						}
+}
+
+
+.content {
+    position: absolute;
+    display: block;
+    padding: 10px;
+}
+
+.content.startbox {
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 150px;
+    height: 60px;
+    background: #00AADF;
+    left: 50%;
+    margin-left: -75px;
+    line-height: 10px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.content.endbox {
+    background: #00AADF;
+    color: #FFF;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.content.question {
+    background: #FFF;
+    border: 2px solid #DDD;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    color: #444;
+    min-height: 130px;
+	 max-height: 130px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	overflow:hidden;
+}
+
+.content.question p {
+	display:block;
+	height:60px;
+	width:175px;
+	position:absolute;
+	padding:0;
+}
+
+.content.answer {
+    margin-top: 100px;
+    background: #00AADF;
+    border: 1.5px solid #00AADF;
+    color: white;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    display: block;
+    z-index: 10;
+	padding:10px;
+	padding-bottom:20px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.content.answer p {
+    padding-top: 5px;
+}
+
+a.button {
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	text-indent:30px;
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+   	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: 100px;
+    z-index: 9;
+	background: #00AADF url('../img/open.png');
+}
+
+a.button:hover {background:#3399CC url('../img/open.png');
+				color:#FFF;}
+
+a.close {
+    width: 19px;
+    height: 19px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    background: transparent url("../img/close.png") no-repeat top;
+    text-indent: -10000px;
+}
+
+a.close:after {
+    content: '';
+    display: block;
+    height: 1px;
+    clear: both;
+}
+
+
+ul.flowchart li ul.links {
+	display:block;
+	overflow:visible;
+	height:auto;
+	float:left;
+	margin:0;
+	padding:0;}
+
+ul.flowchart li ul.links li {float:none !important;
+	clear:both;
+	display:block !important;
+	overflow:visible;
+	height:50px;
+	}
+
+ul.flowchart li ul.links li a {margin-left:60px;
+								float:right;
+								height:100%;
+								text-align:left;
+								vertical-align:middle;}
+								
+ul.flowchart li ul.links li.video {background: transparent url("../img/camera.png.html") no-repeat top left;}
+ul.flowchart li ul.links li.text {background: transparent url("../img/text.png.html") no-repeat top left;}
+ul.flowchart li ul.links li.web {background: transparent url("../img/web.png.html") no-repeat top left;}
+
+/* ---------------------------------------------------------
+   Print styles
+   ---------------------------------------------------------*/
+@media print {
+    * {
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        background: transparent !important;
+    }
+    
+    html {
+        background-color: #fff;
+    }
+    
+    /* Hide navigation */
+    nav {
+        display: none;
+    }
+    
+    /* Show link destinations in brackets after the link text */
+    a[href]:after {
+        content: " (" attr(href) ") ";
+    }
+    
+    a[href] {
+        font-weight: 700;
+        text-decoration: underline;
+        color: #06c;
+        border: none;
+    }
+    
+    /* Don't show link destinations for JavaScript or internal links */
+    a[href^=javascript:]:after,a[href^=#]:after {
+        content: "";
+    }
+    
+    /* Show abbr title value in brackets after the text */
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    
+    figure {
+        margin-bottom: 1em;
+        overflow: hidden;
+    }
+    
+    figure img {
+        border: 1px solid #000;
+    }
+
+}
