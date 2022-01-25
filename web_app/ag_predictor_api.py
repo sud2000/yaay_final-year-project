@@ -13,9 +13,9 @@ import pandas as pd
 
 # lr_model is our simple logistic regression model
 # lr_model.feature_names are the four different iris measurements
-with open("static/models/lr_tuned.pkl", "rb") as f:
+with open("web_app/static/models/lr_tuned.pkl", "rb") as f:
     lr_model = pickle.load(f)
-with open("static/models/scaler_sel.pkl","rb") as g:
+with open("web_app/static/models/scaler_sel.pkl","rb") as g:
     scaler = pickle.load(g)
 
 feature_names = lr_model.feature_names
