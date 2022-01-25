@@ -12,3 +12,4 @@ six
 xgboost
 pydotplus
 graphviz
+pyrebase
