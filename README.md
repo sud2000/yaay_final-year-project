@@ -1,3 +1,5 @@
+Out Heroku link: https://yaay-final-year.herokuapp.com/
+
 Problem statement: *Using data from the web, can we build models using supervised learning techniques to classify whether a startup will be successful?*
 
 I focused on companies founded within the last decade that had raised more than one round of funding. I narrowed the term "success" to mean IPO or getting acquired in this case and "failure" as closing. After tuning a logistic regression model, I deployed the model via a flask web app on [Heroku](https://startup-predictor.herokuapp.com/).
