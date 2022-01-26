@@ -19,7 +19,7 @@ app = flask.Flask(__name__)
 
 predictions = [{}]
 @app.route("/")
-@app.route("/predict/", methods=["POST", "GET"])
+@app.route("/predict", methods=["POST", "GET"])
 # GET method is a request you make when you click a link on a website
 # POST is like filling out a form
 def predict():
@@ -47,12 +47,12 @@ def predict():
     # break up the tuple into those two variables
     print(x_input)
     print(predictions)
-    # if request.method == 'POST':
+ ##   if request.method == 'POST':
     # if predictions != [{'name': 'Fail', 'prob': 0.9644768415496009}, {'name': 'Success', 'prob': 0.03552315845039906}]:
     # # if request.args is None:
     # # if x_input != [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0]:
     #     predictions = predictions
-    #     return redirect('/answer/')
+ ##        return redirect('/answer/')
     return render_template('predictor.html', x_input=x_input,
                                  feature_names=feature_names,
                                  prediction=predictions,
@@ -62,7 +62,7 @@ def predict():
     # CSS has to know these names though (x_input, feature_names, prediction)
     # even though flask does not because of kwargs
 
-@app.route("/answer/", methods=["POST", "GET"])
+@app.route("/answer", methods=["POST", "GET"])
 def predict2():
     # request.args contains all the arguments passed by our form
     # comes built in with flask. It is a dictionary of the form
@@ -88,11 +88,11 @@ def predict2():
     # break up the tuple into those two variables
     print(x_input)
     print(predictions)
-    # if request.method == 'POST':
+##    #if request.method == 'POST':
     # if predictions != [{'name': 'Fail', 'prob': 0.9644768415496009}, {'name': 'Success', 'prob': 0.03552315845039906}]:
     # # if request.args is None:
     # # if x_input != [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0]:
-    #     predictions = predictions
+##    #     predictions = predictions
     #     return redirect('/answer/')
     return render_template('answer.html', x_input=x_input,
                                  feature_names=feature_names,
@@ -102,10 +102,10 @@ def predict2():
 
 if __name__=="__main__":
     # For local development:
-    #app.run(debug=True)
+    app.run(debug=True)
     # For public web serving:
     #app.run(host='0.0.0.0')
-    app.run()
+    #app.run()
 
 # For public web serving:
 # app.run(host='0.0.0.0')
