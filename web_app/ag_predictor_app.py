@@ -23,6 +23,11 @@ from ag_predictor_api import fund_extract,convert, make_prediction, feature_name
 # function will respond to web requests for the URL /, which is the main URL.
 
 # Initialize the app
+
+# Python sets the __name__ variable to 
+# the module name, so the value of this variable
+# will vary depending on the Python source 
+# file in which you use it.
 app = flask.Flask(__name__)
 
 
@@ -80,7 +85,8 @@ def predict():
                                  feature_names=feature_names,
                                  prediction=predictions,
                                  feature_display_names=feature_display_names)
-    # render template uses kwargs (**) which allows unlimited unknown args that can be taken in and do some common thing with all of them
+    # render template uses kwargs (**) which allows unlimited unknown args that 
+    # can be taken in and do some common thing with all of them
     #feature_names came from predictor_api
     # CSS has to know these names though (x_input, feature_names, prediction)
     # even though flask does not because of kwargs
