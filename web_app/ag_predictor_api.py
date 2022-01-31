@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 # lr_model is our simple logistic regression model
-# lr_model.feature_names are the four different iris measurements
+# lr_model.feature_names
 with open("web_app/static/models/lr_tuned.pkl", "rb") as f:
     lr_model = pickle.load(f)
 with open("web_app/static/models/scaler_sel.pkl","rb") as g:
@@ -22,6 +22,23 @@ feature_names = lr_model.feature_names
 feature_display_names = lr_model.feature_display_names
 # all of the attributes of the model are also saved in the pickle file
 # like feature_names and target_names, which are all stored as key value pairs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def fund_extract(inputs):
     """

@@ -2,8 +2,27 @@ import flask
 from flask import request, render_template, redirect
 from ag_predictor_api import fund_extract,convert, make_prediction, feature_names, feature_display_names # import from our other python file
 
-# Initialize the app
+#handle HTTP requests
+#Importing  the Flask object, 
+#and create a function that returns an HTTP response
 
+
+# import the Flask object from the flask package. 
+# You then use it to create your Flask application instance 
+# with the name app. You pass the special variable __name__
+# that holds the name of the current Python module.
+#  It’s used to tell the instance where it’s located—you need this because 
+#  Flask sets up some paths behind the scenes.
+
+# Once you create the app instance,
+# you use it to handle incoming web requests and send responses to the user.
+# @app.route is a decorator that turns a regular Python function into a Flask view function,
+# which converts the function’s return value into an HTTP response
+# to be displayed by an HTTP client, such as a web browser.
+# You pass the value '/' to @app.route() to signify that this 
+# function will respond to web requests for the URL /, which is the main URL.
+
+# Initialize the app
 app = flask.Flask(__name__)
 
 
@@ -18,10 +37,14 @@ app = flask.Flask(__name__)
 #     # return render_template('index.html')
 
 predictions = [{}]
+
+# decorator to route URL
 @app.route("/")
 @app.route("/predict", methods=["POST", "GET"])
 # GET method is a request you make when you click a link on a website
 # POST is like filling out a form
+
+# binding to the function of route 
 def predict():
     # request.args contains all the arguments passed by our form
     # comes built in with flask. It is a dictionary of the form
@@ -94,6 +117,17 @@ def predict2():
     # # if x_input != [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0]:
 ##    #     predictions = predictions
     #     return redirect('/answer/')
+
+
+# Flask provides a render_template() helper function 
+# that allows use of the Jinja template engine.
+# This will make managing HTML much easier by writing your HTML code
+# in .html files as well as using logic in your HTML code.
+# You’ll use these HTML files, (templates) to build all of your
+# application pages, such as the main page where you’ll 
+# display the current blog posts, the page of the blog post,
+# the page where the user can add a new post, and so on.
+
     return render_template('answer.html', x_input=x_input,
                                  feature_names=feature_names,
                                  prediction=predictions,
